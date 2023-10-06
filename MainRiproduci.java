@@ -9,7 +9,7 @@ public class MainRiproduci {
         for (int i = 0; i < fileArry.length; i++) {
             System.out.println("Inserisci audio per creare un audio, video per creare un video,immagine per creare un immagine");
             String inputCreazione = input.nextLine();
-            if (inputCreazione.equals("audio")) {
+            if (inputCreazione.toLowerCase().trim().equals("audio")) {
                 System.out.println("Inserisci un titolo e premi invio");
                 String inputTitolo = input.nextLine();
                 System.out.println("Inserisci la durata e premi invio");
@@ -17,7 +17,7 @@ public class MainRiproduci {
                 Audio audio = new Audio(inputTitolo, inputDurata);
                 fileArry[i] = audio;
             }
-            if (inputCreazione.equals("video")) {
+            if (inputCreazione.toLowerCase().trim().equals("video")) {
                 System.out.println("Inserisci un titolo e premi invio");
                 String inputTitolo = input.nextLine();
                 System.out.println("Inserisci la durata e premi invio");
@@ -26,28 +26,83 @@ public class MainRiproduci {
                 video.play();
                 fileArry[i] = video;
             }
-            if (inputCreazione.equals("immagine")) {
+            if (inputCreazione.toLowerCase().trim().equals("immagine")) {
                 System.out.println("Inserisci un titolo e premi invio");
                 String inputTitolo = input.nextLine();
                 Immagine immagine = new Immagine(inputTitolo);
                 immagine.show();
                 fileArry[i] = immagine;
+            } else {
+                System.out.println("Errore tipo di file non esistente, ricomicia a creare i file");
+                i = -1;
             }
         }
-        // for (int i = 0; i < fileArry.length; i++) {
-//System.out.println("Inserisci 0 per vedere il primo file creato 1 per il secondo 2 per il terzo 3 per il quarto 4 per il quinto");
-        //  int mostraFile = Integer.parseInt(input.nextLine());
-        //  if (fileArry[mostraFile] instanceof Audio) {
-        //   ((Audio) fileArry[mostraFile]).play();
-        //  }
-        // if (fileArry[mostraFile] instanceof Video) {
-        //   ((Video) fileArry[mostraFile]).play();
-        // }
-        //if (fileArry[mostraFile] instanceof Immagine) {
-        //    ((Immagine) fileArry[mostraFile]).show();
-        //  }
-        // }
 
+        while (true) {
+            System.out.println("Inserisci 1 per vedere il primo file creato 2 per il secondo 3 per il terzo 4 per il quarto 5 per il quinto, iserisci 0 per terminare il programma");
+            int mostraFile = Integer.parseInt(input.nextLine());
+
+            if (mostraFile == 0) {
+                break;
+            }
+
+            if (mostraFile == 1) {
+                if (fileArry[0] instanceof Audio) {
+                    ((Audio) fileArry[0]).play();
+                }
+                if (fileArry[0] instanceof Video) {
+                    ((Video) fileArry[0]).play();
+                }
+                if (fileArry[0] instanceof Immagine) {
+                    ((Immagine) fileArry[0]).show();
+                }
+            }
+            if (mostraFile == 2) {
+                if (fileArry[1] instanceof Audio) {
+                    ((Audio) fileArry[1]).play();
+                }
+                if (fileArry[1] instanceof Video) {
+                    ((Video) fileArry[1]).play();
+                }
+                if (fileArry[1] instanceof Immagine) {
+                    ((Immagine) fileArry[1]).show();
+                }
+            }
+            if (mostraFile == 3) {
+                if (fileArry[2] instanceof Audio) {
+                    ((Audio) fileArry[2]).play();
+                }
+                if (fileArry[2] instanceof Video) {
+                    ((Video) fileArry[2]).play();
+                }
+                if (fileArry[2] instanceof Immagine) {
+                    ((Immagine) fileArry[2]).show();
+                }
+            }
+            if (mostraFile == 4) {
+                if (fileArry[3] instanceof Audio) {
+                    ((Audio) fileArry[3]).play();
+                }
+                if (fileArry[3] instanceof Video) {
+                    ((Video) fileArry[3]).play();
+                }
+                if (fileArry[3] instanceof Immagine) {
+                    ((Immagine) fileArry[3]).show();
+                }
+            }
+            if (mostraFile == 5) {
+                if (fileArry[4] instanceof Audio) {
+                    ((Audio) fileArry[4]).play();
+                }
+                if (fileArry[4] instanceof Video) {
+                    ((Video) fileArry[4]).play();
+                }
+                if (fileArry[4] instanceof Immagine) {
+                    ((Immagine) fileArry[4]).show();
+                }
+            }
+
+        }
 
         input.close();
 
