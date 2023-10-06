@@ -16,21 +16,17 @@ public class MainRiproduci {
                 int inputDurata = Integer.parseInt(input.nextLine());
                 Audio audio = new Audio(inputTitolo, inputDurata);
                 fileArry[i] = audio;
-            }
-            if (inputCreazione.toLowerCase().trim().equals("video")) {
+            } else if (inputCreazione.toLowerCase().trim().equals("video")) {
                 System.out.println("Inserisci un titolo e premi invio");
                 String inputTitolo = input.nextLine();
                 System.out.println("Inserisci la durata e premi invio");
                 int inputDurata = Integer.parseInt(input.nextLine());
                 Video video = new Video(inputTitolo, inputDurata);
-                video.play();
                 fileArry[i] = video;
-            }
-            if (inputCreazione.toLowerCase().trim().equals("immagine")) {
+            } else if (inputCreazione.toLowerCase().trim().equals("immagine")) {
                 System.out.println("Inserisci un titolo e premi invio");
                 String inputTitolo = input.nextLine();
                 Immagine immagine = new Immagine(inputTitolo);
-                immagine.show();
                 fileArry[i] = immagine;
             } else {
                 System.out.println("Errore tipo di file non esistente, ricomicia a creare i file");
