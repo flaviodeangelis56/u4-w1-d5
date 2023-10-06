@@ -1,14 +1,12 @@
-public class Video {
+public class Video extends FileMultimediali {
     public String titolo;
     public int durata;
-    public Volume volume;
-    public Luminosità luminosità;
+    public Volume volume = Volume.TRE;
+    public Luminosità luminosità = Luminosità.TRE;
 
-    public Video(String titolo, int durata, Volume volume, Luminosità luminosità) {
+    public Video(String titolo, int durata) {
         this.titolo = titolo;
         this.durata = durata;
-        this.volume = volume;
-        this.luminosità = luminosità;
     }
 
     public void alzaVolume() {

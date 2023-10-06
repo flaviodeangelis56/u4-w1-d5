@@ -1,10 +1,10 @@
-public class Immagine {
+public class Immagine extends FileMultimediali {
     public String titolo;
-    public Luminosità luminosità;
+    public Luminosità luminosità = Luminosità.TRE;
 
-    public Immagine(String titolo, Luminosità luminosità) {
+    public Immagine(String titolo) {
         this.titolo = titolo;
-        this.luminosità = luminosità;
+
     }
 
     public void alzaLuminosità() {
@@ -62,5 +62,4 @@ public class Immagine {
         }
     }
 }
-
 

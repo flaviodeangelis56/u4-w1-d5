@@ -1,12 +1,12 @@
-public class Audio {
+public class Audio extends FileMultimediali {
     public String titolo;
     public int durata;
-    public Volume volume;
+    public Volume volume = Volume.TRE;
 
-    public Audio(String titolo, int durata, Volume volume) {
+    public Audio(String titolo, int durata) {
         this.titolo = titolo;
         this.durata = durata;
-        this.volume = volume;
+
     }
 
     public void alzaVolume() {
